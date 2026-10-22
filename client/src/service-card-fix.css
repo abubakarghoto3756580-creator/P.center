@@ -1,0 +1,100 @@
+/**
+ * Modern Clinical Confidence — Services/Care Areas readability correction only.
+ * Keeps the existing navy, teal, gold, image-hover, numbering, and card treatment.
+ */
+
+.department-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 424px;
+}
+
+.service-card-title {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  margin-top: 27px;
+  padding: 0 72px 18px 0;
+}
+
+.service-card-title h3 {
+  margin: 0;
+  padding-bottom: 16px;
+  color: var(--teal2);
+  font-size: 27px;
+  line-height: 1.12;
+}
+
+.service-card-checklist {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--ink);
+  font-size: 11px;
+  line-height: 1.42;
+}
+
+.service-card-checklist span {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.service-card-checklist span svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
+.service-card-link {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(57, 141, 156, 0.3);
+  color: var(--teal2);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.department-card:hover .service-card-title h3,
+.department-card:hover .service-card-checklist,
+.department-card:hover .service-card-link {
+  color: #ffffff;
+}
+
+.department-card:hover .service-card-link {
+  border-top-color: rgba(255, 255, 255, 0.52);
+}
+
+.rtl .service-card-title {
+  padding-right: 0;
+  padding-left: 72px;
+}
+
+@media (max-width: 560px) {
+  .department-card {
+    min-height: 430px;
+    padding: 25px;
+  }
+
+  .service-card-title {
+    margin-top: 27px;
+    padding-bottom: 20px;
+  }
+
+  .service-card-title h3 {
+    padding-bottom: 18px;
+    font-size: 25px;
+  }
+
+  .service-card-checklist {
+    gap: 9px;
+  }
+}

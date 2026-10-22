@@ -1,0 +1,5 @@
+{
+  "framework": "vite",
+  "buildCommand": "pnpm sync-assets && pnpm build",
+  "outputDirectory": "dist/public"
+}

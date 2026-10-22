@@ -1,0 +1,126 @@
+/* Mobile-only clean clinical landing treatment inspired by the supplied reference. */
+@media (max-width: 560px) {
+  .site-header {
+    padding-top: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .nav-wrap {
+    padding: 0 !important;
+  }
+
+  .nav-inner {
+    width: 100% !important;
+    min-height: 72px !important;
+    padding: 0 17px !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(27, 43, 75, 0.08) !important;
+  }
+
+  .official-logo {
+    width: 146px !important;
+    height: 52px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+  }
+
+  .nav-actions {
+    gap: 7px !important;
+  }
+
+  .language-switch {
+    height: 32px !important;
+    padding: 0 9px !important;
+    border-color: rgba(27, 43, 75, 0.18) !important;
+    color: var(--ink) !important;
+    background: #ffffff !important;
+    font-size: 10px !important;
+  }
+
+  .menu-button {
+    width: 38px !important;
+    height: 38px !important;
+    border: 1px solid rgba(27, 43, 75, 0.16) !important;
+    background: #ffffff !important;
+    color: var(--ink) !important;
+  }
+
+  .hero-section {
+    width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .hero-card {
+    min-height: 680px !important;
+    border-radius: 0 0 18px 18px !important;
+    background: #f7fbfc !important;
+  }
+
+  .hero-copy {
+    width: 100% !important;
+    padding: 50px 18px 92px !important;
+  }
+
+  .hero-copy .eyebrow {
+    margin-bottom: 18px;
+    font-size: 10px;
+  }
+
+  .hero-copy h1 {
+    max-width: 335px;
+    font-size: clamp(40px, 12.4vw, 50px) !important;
+    line-height: 1.02 !important;
+  }
+
+  .hero-copy h1 .hero-word-treatment {
+    font-size: 1.08em !important;
+  }
+
+  .hero-description {
+    max-width: 286px !important;
+    margin-top: 25px !important;
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+  }
+
+  .hero-actions {
+    gap: 14px !important;
+    margin-top: 26px;
+  }
+
+  .hero-actions .primary-button {
+    min-height: 48px;
+    padding-inline: 20px;
+  }
+
+  .hero-actions .text-button {
+    font-size: 12px;
+  }
+
+  .hero-bottom-note {
+    bottom: 24px !important;
+    left: 18px !important;
+    font-size: 10px;
+  }
+
+  .hero-art img {
+    object-position: 80% center !important;
+  }
+
+  .hero-art:before {
+    background: linear-gradient(90deg, rgba(247, 251, 252, 0.99) 0%, rgba(247, 251, 252, 0.94) 52%, rgba(247, 251, 252, 0.18) 100%) !important;
+  }
+
+  .rtl .hero-copy {
+    padding: 50px 18px 92px !important;
+    text-align: right;
+  }
+
+  .rtl .hero-bottom-note {
+    right: 18px !important;
+    left: auto !important;
+  }
+}

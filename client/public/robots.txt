@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amhospclinic-tgksi7tz.manus.space/sitemap.xml

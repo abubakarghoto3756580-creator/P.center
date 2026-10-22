@@ -1,0 +1,17 @@
+/* Approved Modern Clinical Confidence — preserve the original prominent stat scale while CountUpStat supplies its animated inline span. */
+.stats-band strong > [data-count-up] {
+  display: inline;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+.insurance-partners-section {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.insurance-partners-section > .insurance-block {
+  grid-column: 1 / -1;
+  width: 100%;
+}

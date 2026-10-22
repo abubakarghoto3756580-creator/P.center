@@ -1,0 +1,14 @@
+/* Modern Clinical Confidence — preserve the navy/teal/gold navbar; mirror only its Arabic and mobile edge alignment. */
+.site-shell.rtl .nav-inner {
+  flex-direction: row !important;
+}
+
+@media (max-width: 860px) {
+  .site-shell:not(.rtl) .nav-actions {
+    margin-left: auto;
+  }
+
+  .site-shell.rtl .nav-actions {
+    margin-right: auto;
+  }
+}

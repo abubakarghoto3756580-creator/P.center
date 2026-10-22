@@ -1,0 +1,99 @@
+/* Targeted crop adjustments for the confirmed real-clinic image replacements. */
+.hero-art img {
+  object-position: 78% center !important;
+}
+
+.quick-image-card img {
+  object-position: 50% 36%;
+}
+
+.about-photo img {
+  object-position: 52% 44%;
+}
+
+.about-video img {
+  object-position: 50% 43%;
+}
+
+/* Hero-only hierarchy: keep the original wording while emphasizing “treatment”. */
+.hero-copy h1 .hero-word-your {
+  font-size: 0.88em;
+}
+
+.hero-copy h1 .hero-word-treatment {
+  font-size: 1.14em;
+  letter-spacing: -0.075em;
+}
+
+.hero-copy h1 .hero-word-is-in {
+  display: inline-block;
+  font-size: 0.72em;
+  letter-spacing: -0.055em;
+}
+
+@media (max-width: 860px) {
+  .hero-art img {
+    object-position: 84% center !important;
+  }
+
+  .hero-copy h1 .hero-word-treatment {
+    font-size: 1.1em;
+  }
+
+  .hero-copy h1 .hero-word-is-in {
+    font-size: 0.7em;
+  }
+
+  .quick-image-card img {
+    object-position: 50% 34%;
+  }
+
+  .about-photo img,
+  .about-video img {
+    object-position: 50% 42%;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-art:before {
+    background: linear-gradient(90deg, rgba(247, 251, 252, 0.99) 0%, rgba(247, 251, 252, 0.96) 55%, rgba(247, 251, 252, 0.2) 100%) !important;
+  }
+
+  .hero-art img {
+    object-position: 80% center !important;
+  }
+
+  .hero-copy {
+    width: 92%;
+    padding: 55px 23px 78px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(40px, 12.6vw, 52px);
+    line-height: 1.02;
+    letter-spacing: -0.058em;
+  }
+
+  .hero-copy h1 .hero-word-your {
+    font-size: 0.86em;
+  }
+
+  .hero-copy h1 .hero-word-treatment {
+    font-size: 1.08em;
+    letter-spacing: -0.07em;
+  }
+
+  .hero-copy h1 .hero-word-is-in {
+    font-size: 0.7em;
+  }
+
+  .hero-copy h1 strong {
+    font-size: 0.82em;
+    letter-spacing: -0.065em;
+  }
+
+  .hero-description {
+    max-width: 330px;
+    margin-top: 24px;
+  }
+}

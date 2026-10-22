@@ -1,0 +1,232 @@
+/**
+ * Modern Clinical Confidence — Treatment Techniques carousel only.
+ * Retains the existing dark navy field with teal and gold clinical accents.
+ */
+
+.technique-carousel {
+  display: grid;
+  min-width: 0;
+  gap: 19px;
+}
+
+.technique-carousel-window {
+  position: relative;
+  min-height: 336px;
+  overflow: hidden;
+  border: 1px solid rgba(220, 244, 245, 0.3);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(74, 173, 188, 0.2), rgba(255, 255, 255, 0.055));
+  touch-action: pan-y;
+}
+
+.technique-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: end;
+  gap: 30px;
+  padding: 35px 38px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px) scale(0.985);
+  transition: opacity 420ms cubic-bezier(0.23, 1, 0.32, 1), transform 420ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.technique-slide.is-active {
+  z-index: 1;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.technique-slide-number {
+  align-self: start;
+  color: var(--gold);
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(64px, 8vw, 116px);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.82;
+}
+
+.technique-slide-icon {
+  position: absolute;
+  top: 36px;
+  right: 38px;
+  color: #bdeff1;
+}
+
+.technique-slide div {
+  align-self: end;
+  max-width: 540px;
+}
+
+.technique-slide p {
+  margin: 0 0 12px;
+  color: #bdeff1;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.technique-slide h3 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(33px, 4vw, 54px);
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+}
+
+.technique-carousel-controls {
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  align-items: center;
+  gap: 14px;
+}
+
+.technique-carousel-arrow {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(220, 244, 245, 0.36);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: #bdeff1;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.technique-carousel-arrow:hover {
+  border-color: var(--gold);
+  background: rgba(214, 172, 64, 0.18);
+}
+
+.technique-carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+.technique-carousel-status {
+  display: grid;
+  gap: 10px;
+}
+
+.technique-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.technique-carousel-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(220, 244, 245, 0.36);
+  transition: width 220ms cubic-bezier(0.23, 1, 0.32, 1), background-color 220ms ease;
+}
+
+.technique-carousel-dot.is-active {
+  width: 26px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+.technique-carousel-progress {
+  height: 2px;
+  overflow: hidden;
+  background: rgba(220, 244, 245, 0.22);
+}
+
+.technique-carousel-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  background: var(--teal);
+  transition: transform 420ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.rtl .technique-slide {
+  direction: rtl;
+  grid-template-columns: 1fr auto;
+  text-align: right;
+}
+
+.rtl .technique-slide-number {
+  grid-column: 2;
+}
+
+.rtl .technique-slide div {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.rtl .technique-slide-icon {
+  right: auto;
+  left: 38px;
+}
+
+.rtl .technique-carousel-progress span {
+  transform-origin: right center;
+}
+
+@media (max-width: 680px) {
+  .technique-carousel-window {
+    min-height: 292px;
+    border-radius: 18px;
+  }
+
+  .technique-slide {
+    grid-template-columns: 1fr;
+    align-content: end;
+    gap: 18px;
+    padding: 30px 26px;
+  }
+
+  .technique-slide-number {
+    align-self: start;
+    font-size: 70px;
+  }
+
+  .technique-slide div {
+    align-self: end;
+  }
+
+  .technique-slide h3 {
+    font-size: 34px;
+  }
+
+  .technique-slide-icon {
+    top: 29px;
+    right: 26px;
+  }
+
+  .rtl .technique-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .rtl .technique-slide-number,
+  .rtl .technique-slide div {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .rtl .technique-slide-icon {
+    right: auto;
+    left: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .technique-slide,
+  .technique-carousel-progress span,
+  .technique-carousel-dot,
+  .technique-carousel-arrow {
+    transition: none;
+  }
+}

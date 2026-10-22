@@ -1,0 +1,33 @@
+/* Approved service-card photography; images remain hidden until the existing hover state. */
+.department-card.service-01::before {
+  background: linear-gradient(135deg, rgba(27, 43, 75, 0.9), rgba(57, 141, 156, 0.82)), url('/healthcare-images/service-01-shoulder-joint.jpeg') 52% 42% / cover !important;
+}
+
+.department-card.service-02::before {
+  background: linear-gradient(135deg, rgba(27, 43, 75, 0.9), rgba(57, 141, 156, 0.82)), url('/healthcare-images/service-02-spine-vestibular.jpeg') 52% 48% / cover !important;
+}
+
+.department-card.service-03::before {
+  background: linear-gradient(135deg, rgba(27, 43, 75, 0.9), rgba(57, 141, 156, 0.82)), url('/healthcare-images/service-03-sports-muscle.jpeg') 56% 48% / cover !important;
+}
+
+.department-card.service-04::before {
+  background: linear-gradient(135deg, rgba(27, 43, 75, 0.9), rgba(57, 141, 156, 0.82)), url('/healthcare-images/service-04-postoperative.jpeg') 54% 52% / cover !important;
+}
+
+.department-card.service-05::before {
+  background: linear-gradient(135deg, rgba(27, 43, 75, 0.9), rgba(57, 141, 156, 0.82)), url('/healthcare-images/service-05-postfracture.jpeg') 54% 45% / cover !important;
+}
+
+.department-card.service-06::before {
+  background: linear-gradient(135deg, rgba(27, 43, 75, 0.9), rgba(57, 141, 156, 0.82)), url('/healthcare-images/service-06-tendon-fracture.jpeg') 52% 48% / cover !important;
+}
+
+@media (max-width: 860px) {
+  .department-card.service-01::before { background-position: 52% 40%; }
+  .department-card.service-02::before { background-position: 52% 46%; }
+  .department-card.service-03::before { background-position: 56% 46%; }
+  .department-card.service-04::before { background-position: 54% 50%; }
+  .department-card.service-05::before { background-position: 54% 43%; }
+  .department-card.service-06::before { background-position: 52% 46%; }
+}

@@ -1,0 +1,461 @@
+/*
+ * Modern Clinical Confidence — doctor-team refinement only.
+ * Preserves the existing Specialists Center palette, real profiles, imagery, and booking behavior.
+ */
+
+.team-directory {
+  padding-block: 92px 108px;
+}
+
+.team-grid {
+  align-items: stretch;
+  gap: 18px;
+}
+
+.team-card {
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(27, 43, 75, 0.14);
+  border-radius: 21px;
+  background: #d6e8f0;
+  box-shadow: 0 6px 18px rgba(27, 43, 75, 0.07);
+  transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(27, 43, 75, 0.12);
+}
+
+.team-photo-pending,
+.team-photo-pending.has-photo {
+  display: grid;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  padding: 0;
+  border-bottom: 1px solid rgba(27, 43, 75, 0.1);
+  background: #ffffff;
+}
+
+.team-photo-pending.has-photo {
+  place-items: end center;
+}
+
+.team-photo-pending.has-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.team-card:hover .team-photo-pending.has-photo img {
+  transform: scale(1.02);
+}
+
+.team-photo-pending > span {
+  align-self: center;
+}
+
+.team-photo-pending small {
+  bottom: 13px;
+  left: 16px;
+  right: 16px;
+}
+
+.team-photo-pending.professional-avatar {
+  position: relative;
+  place-items: center;
+  background: linear-gradient(135deg, #eaf5f7, #d6e8f0);
+}
+
+.professional-avatar-glyph {
+  position: relative;
+  display: grid;
+  width: 98px;
+  height: 98px;
+  place-items: center;
+  border: 1px solid rgba(57, 141, 156, 0.24);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  color: #398d9c;
+  box-shadow: 0 10px 22px rgba(27, 43, 75, 0.09);
+}
+
+.professional-avatar-glyph::after {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: var(--gold);
+  content: "";
+}
+
+.professional-avatar-glyph.avatar-female::before {
+  position: absolute;
+  inset: 12px 17px 15px;
+  border: 2px solid rgba(57, 141, 156, 0.32);
+  border-radius: 48% 48% 42% 42%;
+  content: "";
+}
+
+.professional-avatar-glyph svg {
+  position: relative;
+  z-index: 1;
+}
+
+.team-card-content {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: 19px 18px 18px;
+  background: #d6e8f0;
+}
+
+.team-card h3 {
+  display: -webkit-box;
+  min-height: 49px;
+  width: 100%;
+  margin: 0 0 10px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--ink);
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  line-height: 1.16;
+  text-align: center;
+  text-wrap: balance;
+  text-transform: uppercase;
+}
+
+.team-specialty {
+  display: -webkit-box;
+  min-height: 42px;
+  width: 100%;
+  margin: 0 0 13px;
+  overflow: hidden;
+  color: #398d9c;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.085em;
+  line-height: 1.5;
+  text-align: center;
+  text-wrap: balance;
+  text-transform: uppercase;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.team-experience {
+  display: flex;
+  width: 100%;
+  min-height: 21px;
+  margin: 0 0 17px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.team-experience svg {
+  color: var(--gold);
+}
+
+.team-card-actions {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.team-book,
+.team-view {
+  min-height: 44px;
+  border-radius: 11px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease, border-color 180ms ease;
+}
+
+.team-book {
+  background: #4aadbc;
+}
+
+.team-book:hover {
+  background: #398d9c;
+}
+
+.team-view {
+  border-color: #4aadbc;
+  background: rgba(255, 255, 255, 0.42);
+  color: #398d9c;
+}
+
+.team-view:hover {
+  border-color: var(--ink);
+  background: #ffffff;
+  color: #398d9c;
+}
+
+.rtl .team-card h3,
+.rtl .team-specialty,
+.rtl .team-book,
+.rtl .team-view {
+  letter-spacing: 0;
+}
+
+.team-book:active,
+.team-view:active {
+  transform: scale(0.97);
+}
+
+.team-book:focus-visible,
+.team-view:focus-visible,
+.profile-dialog-close:focus-visible {
+  outline: 3px solid rgba(74, 173, 188, 0.45);
+  outline-offset: 2px;
+}
+
+.profile-dialog-backdrop {
+  position: fixed;
+  z-index: 70;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(14, 27, 50, 0.62);
+}
+
+.profile-dialog {
+  position: relative;
+  display: grid;
+  width: min(900px, 100%);
+  max-height: min(700px, calc(100vh - 48px));
+  grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+  align-items: stretch;
+  overflow: auto;
+  border: 1px solid rgba(27, 43, 75, 0.18);
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 28px 70px rgba(8, 20, 45, 0.28);
+}
+
+.profile-dialog-image {
+  display: grid;
+  height: 100%;
+  min-height: 360px;
+  overflow: hidden;
+  place-items: end center;
+  background: #f8fcfd;
+}
+
+.profile-dialog-image img {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.profile-dialog-image span {
+  display: grid;
+  width: 82px;
+  height: 82px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.profile-dialog-image .profile-avatar {
+  width: 136px;
+  height: 136px;
+}
+
+.profile-dialog-body {
+  min-width: 0;
+  padding: 38px 42px 40px;
+  background: #ffffff;
+}
+
+.profile-dialog-body .eyebrow {
+  margin-bottom: 14px;
+}
+
+.profile-dialog-body h2 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.12;
+}
+
+.profile-dialog-specialty {
+  margin: 0 0 17px;
+  color: var(--teal2);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.profile-dialog-body > .team-experience {
+  margin: 0 0 22px;
+}
+
+.profile-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+}
+
+.profile-detail-grid > div {
+  padding: 22px 0;
+  border-top: 1px solid rgba(27, 43, 75, 0.14);
+}
+
+.profile-detail-grid h3 {
+  margin: 0 0 11px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.profile-detail-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.profile-book {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 24px;
+  padding: 0 20px;
+  border-radius: 11px;
+  font-size: 12px;
+}
+
+.profile-dialog-close {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(27, 43, 75, 0.14);
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.rtl .profile-dialog-image {
+  order: 2;
+}
+
+.rtl .profile-dialog-body {
+  order: 1;
+}
+
+.rtl .profile-dialog-close {
+  right: auto;
+  left: 14px;
+}
+
+.rtl .profile-detail-grid ul {
+  padding-right: 17px;
+  padding-left: 0;
+}
+
+@media (max-width: 1100px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .team-directory {
+    padding-block: 72px 80px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .team-photo-pending,
+  .team-photo-pending.has-photo {
+    aspect-ratio: 3 / 2;
+  }
+
+  .team-card-content {
+    padding: 16px;
+  }
+
+  .team-card h3 {
+    min-height: 45px;
+    font-size: 21px;
+  }
+
+  .team-book,
+  .team-view {
+    min-height: 44px;
+  }
+
+  .profile-dialog-backdrop {
+    align-items: end;
+    padding: 12px;
+  }
+
+  .profile-dialog {
+    max-height: calc(100vh - 24px);
+    grid-template-columns: 1fr;
+    border-radius: 18px;
+  }
+
+  .profile-dialog-image {
+    height: clamp(240px, 42vh, 310px);
+    min-height: 0;
+    max-height: none;
+  }
+
+  .profile-dialog-body {
+    padding: 28px 23px 30px;
+  }
+
+  .profile-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .profile-book {
+    width: 100%;
+    margin-top: 22px;
+  }
+
+  .rtl .profile-dialog-image,
+  .rtl .profile-dialog-body {
+    order: initial;
+  }
+}
