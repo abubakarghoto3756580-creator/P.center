@@ -1,11 +1,10 @@
 {
-  "name": "american-hospital-clinics",
+  "name": "p-center-clinic",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "sync-assets": "node scripts/sync-manus-assets.mjs",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",

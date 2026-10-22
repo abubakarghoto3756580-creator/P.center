@@ -1,0 +1,89 @@
+/* P. Center overrides: square heart logo + wordmark, partner cards */
+.site-shell .brand .official-logo {
+  width: auto;
+  height: 54px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 0;
+}
+
+.brand-wordmark {
+  display: grid;
+  gap: 2px;
+  line-height: 1.1;
+  text-align: start;
+}
+
+.brand-wordmark strong {
+  color: var(--ink, #1b2b4b);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand-wordmark small {
+  color: var(--muted, #5d6b7d);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.site-footer .brand-wordmark strong { color: #fff; }
+.site-footer .brand-wordmark small { color: rgba(255, 255, 255, 0.75); }
+.site-footer .official-logo { background: #fff; border-radius: 12px; padding: 4px; }
+
+@media (max-width: 560px) {
+  .site-shell .brand .official-logo { height: 42px; }
+  .brand-wordmark strong { font-size: 18px; }
+  .brand-wordmark small { font-size: 10px; }
+}
+
+.partner-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.partner-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink, #1b2b4b);
+  box-shadow: 0 10px 22px rgba(10, 45, 78, 0.12);
+}
+
+.partner-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e5f6f7;
+  color: var(--teal2, #206a8e);
+}
+
+.partner-card h4 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--ink, #1b2b4b);
+}
+
+.partner-card p {
+  margin: 0;
+  color: var(--muted, #5d6b7d);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+  .partner-cards { grid-template-columns: 1fr; }
+}
+
+.site-footer .footer-links a[href^="http"] { text-decoration: underline; }
