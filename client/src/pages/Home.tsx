@@ -38,6 +38,7 @@ import {
   UserRound,
   Waves,
   Handshake,
+  Star,
   X,
 } from "lucide-react";
 
@@ -55,7 +56,7 @@ const phoneHref = "tel:+966567844469";
 const phoneDisplay = "+966 56 784 4469";
 const instagramUrl = "https://www.instagram.com/p.center0/";
 const linktreeUrl = "https://linktr.ee/p.center0";
-const mapsUrl = linktreeUrl;
+const mapsUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("عيادة نخبة الأخصائيون للرعاية الطبية جدة");
 
 const content = {
   en: {
@@ -65,10 +66,10 @@ const content = {
     nav: [
       ["Services", "#services"], ["Team", "#team"], ["About", "#about"], ["Contact", "#contact"],
     ],
-    utility: "Saudi Arabia",
+    utility: "Jeddah, Saudi Arabia",
     badges: ["Physiotherapy & Rehabilitation", "Sports injuries", "Spine & nerve care"],
     appointment: "Book appointment",
-    heroEyebrow: "Physiotherapy & Rehabilitation · Saudi Arabia",
+    heroEyebrow: "Physiotherapy & Rehabilitation · Jeddah",
     heroLead: "Enhance your",
     heroStrong: "health.",
     heroBody: "P. Center, the Elite Specialists Clinic for Medical Care, offers physiotherapy and rehabilitation for musculoskeletal conditions, sports injuries, spine and nerve care, lymphedema, and women's health.",
@@ -87,7 +88,7 @@ const content = {
     aboutEyebrow: "The clinic",
     aboutTitle: "Rehabilitation guided by",
     aboutAccent: "elite specialists.",
-    aboutBody: "P. Center is a physiotherapy and rehabilitation clinic in Saudi Arabia, led by Dr. Khaled Yaseen as Medical Director. Its team of consultants and physiotherapists covers musculoskeletal care, sports injuries, spine and nerve conditions, lymphedema, and women's health. The clinic partners with the Saudi Swimming Federation and Rewaaq Psych-behavioral Therapy.",
+    aboutBody: "P. Center is a physiotherapy and rehabilitation clinic in Jeddah, Saudi Arabia, led by Dr. Khaled Yaseen as Medical Director. Its team of consultants and physiotherapists covers musculoskeletal care, sports injuries, spine and nerve conditions, lymphedema, and women's health. The clinic partners with the Saudi Swimming Federation, the Saudi Physical Therapy Association, Zahra Association, Azzurri Football Club, and Rewaaq Psych-behavioral Therapy.",
     aboutPoints: ["Musculoskeletal & sports rehabilitation", "Spine & nerve care", "Lymphedema & women's health"],
     aboutAction: "Contact the clinic",
     aboutStampTop: "P. Center",
@@ -122,12 +123,17 @@ const content = {
     insuranceEyebrow: "Partners",
     insuranceTitle: "Success",
     insuranceAccent: "partners.",
-    insuranceBody: "Organizations P. Center collaborates with to care for athletes and patients.",
+    insuranceBody: "Federations, associations, clubs and payment partners P. Center works with to care for athletes and patients.",
+    reviewsEyebrow: "Patient reviews",
+    reviewsTitle: "What patients say about",
+    reviewsAccent: "P. Center.",
+    reviewsBody: "Selected five-star Google reviews of the clinic, shared on its Instagram (translated from Arabic).",
+    reviewsAbout: "About",
     contactEyebrow: "Contact the clinic",
     contactTitle: "Start with a",
     contactAccent: "simple message.",
     contactBody: "Book an appointment or ask a general question through WhatsApp or phone. Please avoid sharing sensitive health information through this website form.",
-    map: "Location & links",
+    map: "Open in Google Maps",
     hours: "Working hours",
     phone: "Phone",
     whatsapp: "WhatsApp",
@@ -145,7 +151,7 @@ const content = {
     formService: "Service enquiry",
     formConsent: "I understand this form should not contain sensitive health information.",
     formSend: "Continue to WhatsApp",
-    footerAbout: "Elite Specialists Clinic for Medical Care — physiotherapy and rehabilitation in Saudi Arabia.",
+    footerAbout: "Elite Specialists Clinic for Medical Care — physiotherapy and rehabilitation in Jeddah, Saudi Arabia.",
     footerExplore: "Explore",
     footerAccess: "Patient access",
     footerNotes: "Find us",
@@ -172,10 +178,10 @@ const content = {
     nav: [
       ["الخدمات", "#services"], ["الطاقم الطبي", "#team"], ["من نحن", "#about"], ["تواصل معنا", "#contact"],
     ],
-    utility: "المملكة العربية السعودية",
+    utility: "جدة، المملكة العربية السعودية",
     badges: ["علاج طبيعي وتأهيل", "الإصابات الرياضية", "العمود الفقري والأعصاب"],
     appointment: "احجز موعدًا",
-    heroEyebrow: "علاج طبيعي وتأهيل · المملكة العربية السعودية",
+    heroEyebrow: "علاج طبيعي وتأهيل · جدة",
     heroLead: "عزز",
     heroStrong: "صحتك.",
     heroBody: "تقدم عيادة نخبة الأخصائيون للرعاية الطبية (P. Center) خدمات العلاج الطبيعي والتأهيل للحالات العضلية الهيكلية والإصابات الرياضية وآلام العمود الفقري والأعصاب والوذمة اللمفاوية وصحة المرأة.",
@@ -194,7 +200,7 @@ const content = {
     aboutEyebrow: "عن العيادة",
     aboutTitle: "تأهيل يقوده",
     aboutAccent: "نخبة من الأخصائيين.",
-    aboutBody: "P. Center عيادة للعلاج الطبيعي والتأهيل في المملكة العربية السعودية، يديرها طبيًا د. خالد ياسين. يضم فريقها استشاريين وأخصائيين في العلاج الطبيعي للحالات العضلية الهيكلية والإصابات الرياضية وآلام العمود الفقري والأعصاب والوذمة اللمفاوية وصحة المرأة. وللعيادة شراكات مع الاتحاد السعودي للسباحة ومركز رواق للعلاج النفسي والسلوكي.",
+    aboutBody: "P. Center عيادة للعلاج الطبيعي والتأهيل في جدة، المملكة العربية السعودية، يديرها طبيًا د. خالد ياسين. يضم فريقها استشاريين وأخصائيين في العلاج الطبيعي للحالات العضلية الهيكلية والإصابات الرياضية وآلام العمود الفقري والأعصاب والوذمة اللمفاوية وصحة المرأة. وللعيادة شراكات مع الاتحاد السعودي للسباحة والجمعية السعودية للعلاج الطبيعي وجمعية زهرة ونادي الأزوري ومركز رواق للعلاج النفسي والسلوكي.",
     aboutPoints: ["تأهيل العظام والعضلات والإصابات الرياضية", "العمود الفقري والأعصاب", "الوذمة اللمفاوية وصحة المرأة"],
     aboutAction: "تواصل مع العيادة",
     aboutStampTop: "P. Center",
@@ -229,12 +235,17 @@ const content = {
     insuranceEyebrow: "الشركاء",
     insuranceTitle: "شركاء",
     insuranceAccent: "النجاح.",
-    insuranceBody: "جهات تتعاون معها P. Center للعناية بالرياضيين والمراجعين.",
+    insuranceBody: "اتحادات وجمعيات وأندية وشركاء دفع تتعاون معهم P. Center للعناية بالرياضيين والمراجعين.",
+    reviewsEyebrow: "تجارب المراجعين",
+    reviewsTitle: "ماذا يقول المراجعون عن",
+    reviewsAccent: "P. Center.",
+    reviewsBody: "مختارات من تقييمات Google بخمس نجوم للعيادة، منشورة في حسابها على إنستغرام.",
+    reviewsAbout: "عن",
     contactEyebrow: "تواصل مع العيادة",
     contactTitle: "ابدأ بـ",
     contactAccent: "رسالة بسيطة.",
     contactBody: "احجز موعدًا أو اطرح سؤالًا عامًا عبر واتساب أو الهاتف. يرجى عدم مشاركة معلومات صحية حساسة من خلال نموذج الموقع.",
-    map: "الموقع وروابط التواصل",
+    map: "افتح في خرائط Google",
     hours: "ساعات العمل",
     phone: "الهاتف",
     whatsapp: "واتساب",
@@ -252,7 +263,7 @@ const content = {
     formService: "استفسار عن خدمة",
     formConsent: "أفهم أن هذا النموذج لا ينبغي أن يتضمن معلومات صحية حساسة.",
     formSend: "المتابعة إلى واتساب",
-    footerAbout: "عيادة نخبة الأخصائيون للرعاية الطبية — علاج طبيعي وتأهيل في المملكة العربية السعودية.",
+    footerAbout: "عيادة نخبة الأخصائيون للرعاية الطبية — علاج طبيعي وتأهيل في جدة، المملكة العربية السعودية.",
     footerExplore: "استكشف",
     footerAccess: "خدمات المراجعين",
     footerNotes: "اعثر علينا",
@@ -353,22 +364,66 @@ const clinicianAvatarGender: Record<string, "female" | "male"> = {
 
 const partners = [
   {
-    id: "swimming",
-    icon: Waves,
+    id: "swimming", icon: Waves,
     en: { name: "Saudi Swimming Federation", note: "Cooperation agreement to prevent sports injuries, provide physiotherapy programs, and support performance through sports nutrition." },
     ar: { name: "الاتحاد السعودي للسباحة", note: "اتفاقية تعاون تهدف إلى الوقاية من الإصابات الرياضية وتقديم برامج العلاج الطبيعي ودعم الأداء عبر التغذية الرياضية." },
   },
   {
-    id: "rewaaq",
-    icon: Handshake,
+    id: "spta", icon: ShieldCheck,
+    en: { name: "Saudi Physical Therapy Association", note: "Cooperation agreement supporting joint training and community activities, special offers for registered members, and joint research opportunities." },
+    ar: { name: "الجمعية السعودية للعلاج الطبيعي", note: "اتفاقية تعاون لدعم الأنشطة التدريبية والمجتمعية المشتركة وتقديم عروض خاصة لأعضاء الجمعية واستكشاف فرص التعاون في المشاريع البحثية." },
+  },
+  {
+    id: "zahra", icon: HeartPulse,
+    en: { name: "Zahra Association", note: "Cooperation agreement for breast cancer patients: a 15% discount on physiotherapy services, tailored rehabilitation programs, and awareness workshops on suitable exercises." },
+    ar: { name: "جمعية زهرة لسرطان الثدي", note: "اتفاقية تعاون لمريضات سرطان الثدي: خصم 15% على خدمات العلاج الطبيعي، وبرامج تأهيلية مصممة لاحتياجاتهن، وورش عمل توعوية حول التمارين المناسبة." },
+  },
+  {
+    id: "rewaaq", icon: Handshake,
     en: { name: "Rewaaq Psych-behavioral Therapy", note: "Strategic partnership combining physiotherapy, rehabilitation, and psychological support for better treatment outcomes." },
     ar: { name: "رواق للعلاج النفسي والسلوكي", note: "شراكة استراتيجية تجمع بين العلاج الطبيعي والتأهيل والدعم النفسي لتحقيق أفضل نتائج علاجية." },
   },
+  {
+    id: "azzurri", icon: Dumbbell,
+    en: { name: "Azzurri Football Club", note: "P. Center, based in Jeddah, is the medical and fitness sponsor and partner of the Azzurri football team." },
+    ar: { name: "فريق الأزوري", note: "عيادة نخبة الأخصائيون ومقرها جدة راعٍ وشريك طبي ولياقي لفريق الأزوري لكرة القدم." },
+  },
+  {
+    id: "padel", icon: Sparkles,
+    en: { name: "Ibrahim Al-Ghamdi — Padel player", note: "Medical care agreement with the professional padel player to support athletic performance, physical readiness, and injury prevention." },
+    ar: { name: "إبراهيم الغامدي — لاعب البادل", note: "اتفاقية رعاية طبية مع لاعب البادل المحترف بهدف دعم الأداء الرياضي وتعزيز الجاهزية البدنية والوقاية من الإصابات." },
+  },
+  {
+    id: "tamara", icon: MessageCircle,
+    en: { name: "Tamara", note: "Split your bill into installments when paying for your sessions." },
+    ar: { name: "تمارا", note: "قسّم فاتورة جلساتك على دفعات بكل سهولة." },
+  },
+] as const;
+
+const reviews = [
+  { id: "r1", name: "Sarah Albakri", about: { en: "Mohammed Monshi", ar: "محمد منشي" },
+    en: "My experience with Dr. Mohammed Monshi was excellent. His manner is refined and reassuring, he explains the condition and the treatment plan clearly, and the reception team is respectful and helpful.",
+    ar: "تجربتي كانت جدًا ممتازة مع الدكتور محمد منشي. أسلوبه راقٍ ومريح، ويشرح الحالة والخطة العلاجية بوضوح، وموظفات الاستقبال محترمات ومتعاونات." },
+  { id: "r2", name: "Khalil Hamdan", about: { en: "Dr. Nabil Al-Ghamdi", ar: "د. نبيل الغامدي" },
+    en: "One of the best medical centers: refined service and professional handling. Dr. Nabil is highly skilled in his specialty and explains the case clearly and comfortably.",
+    ar: "من أفضل المراكز الطبية، وخدمة راقية وتعامل احترافي. الدكتور نبيل الغامدي متمكن جدًا في تخصصه، ذو خبرة عالية ويشرح الحالة بشكل واضح ومريح." },
+  { id: "r3", name: "Wael Almalki", about: { en: "Dr. Ahmed Dhalnoun", ar: "د. أحمد ذالنون" },
+    en: "Honestly, one of the best physiotherapy clinics in Jeddah. Dr. Ahmed is trustworthy, sincere and highly professional, and the reception staff are respectful and very cooperative.",
+    ar: "شهادة حق، من أفضل عيادات العلاج الطبيعي على مستوى جدة. الدكتور أحمد ذالنون أمين ومخلص في عمله وعلى مستوى عالٍ من الاحترافية، وموظفة الاستقبال محترمة ومتعاونة جدًا." },
+  { id: "r4", name: "Raneem Hisham", about: { en: "Dr. Omar Al-Abbasi", ar: "د. عمر العباسي" },
+    en: "After a long period of knee pain and many clinic visits, I went to Dr. Omar Al-Abbasi on a recommendation and saw a big difference. Thank you for the kind treatment and the detailed explanation of my case.",
+    ar: "بعد فترة طويلة من ألم الركبة وزيارات كثيرة للعيادات، ذهبت للدكتور عمر العباسي بتوصية ولاحظت فرقًا كبيرًا. أشكره على حسن معاملته وشرح حالتي بالتفصيل." },
+  { id: "r5", name: "اروى طارق", about: { en: "Dr. Khaled Yaseen", ar: "د. خالد ياسين" },
+    en: "One of the best centers I have visited for cleanliness, refined reception, and easy appointment booking. Dr. Khaled is skilled, patient and kind, and explains the case with care.",
+    ar: "من أفضل المراكز اللي زرتها من ناحية النظافة والاستقبال الراقي وسهولة حجز المواعيد. الدكتور خالد ياسين متمكن وصبور وخلوق، ويشرح الحالة بكل اهتمام." },
+  { id: "r6", name: "Amaal Alwafi", about: { en: "Feras Duman", ar: "فراس دومان" },
+    en: "My experience at the clinic was good. The place is clean and uses modern techniques. Specialist Feras has a great, professional manner, explains the case clearly and gives valuable advice.",
+    ar: "تجربتي في عيادة نخبة الأخصائيون جيدة، المكان جيد ويستخدم تقنيات جديدة. الأخصائي فراس أسلوبه رائع ومحترف ويشرح الحالة بكل وضوح ويقدم نصائح قيمة." },
 ] as const;
 
 const hours = {
-  en: [["Working hours", "Confirm via WhatsApp"], ["Phone / WhatsApp", "+966 56 784 4469"]],
-  ar: [["ساعات العمل", "تأكد عبر واتساب"], ["الهاتف / واتساب", "+966 56 784 4469"]],
+  en: [["Saturday", "11:00 AM – 10:00 PM"], ["Sunday", "11:00 AM – 10:00 PM"], ["Monday", "11:00 AM – 10:00 PM"], ["Tuesday", "11:00 AM – 10:00 PM"], ["Wednesday", "11:00 AM – 10:00 PM"], ["Thursday", "11:00 AM – 10:00 PM"], ["Friday", "Closed"]],
+  ar: [["السبت", "11:00 صباحًا – 10:00 مساءً"], ["الأحد", "11:00 صباحًا – 10:00 مساءً"], ["الاثنين", "11:00 صباحًا – 10:00 مساءً"], ["الثلاثاء", "11:00 صباحًا – 10:00 مساءً"], ["الأربعاء", "11:00 صباحًا – 10:00 مساءً"], ["الخميس", "11:00 صباحًا – 10:00 مساءً"], ["الجمعة", "مغلق"]],
 } as const;
 
 
@@ -539,6 +594,7 @@ export default function Home() {
       [".facility-cards", ":scope > article"],
       [".team-grid", ":scope > .team-card"],
       [".reputation-section", ":scope > .reputation-lead, :scope > .reputation-card, :scope > .insurance-block"],
+      [".review-grid", ":scope > .review-card"],
       [".hours-grid", ":scope > div"],
       [".footer-links", ":scope > div"],
     ];
@@ -670,12 +726,14 @@ export default function Home() {
 
         <section className="reputation-section insurance-partners-section section-container" data-reveal><div className="insurance-block"><p className="eyebrow"><span /> {t.insuranceEyebrow}</p><h3>{t.insuranceTitle} <em>{t.insuranceAccent}</em></h3><p>{t.insuranceBody}</p><div className="partner-cards">{partners.map(({ id, icon: Icon, ...partner }) => { const item = partner[language]; return <article className="partner-card" key={id}><span className="partner-icon"><Icon size={24} /></span><h4>{item.name}</h4><p>{item.note}</p></article>; })}</div></div></section>
 
-        <section id="contact" className="contact-section section-container" data-reveal><div className="contact-intro"><span className="brand-motif motif-contact" aria-hidden="true"><LazyImage src={generatedMark} alt="" /></span><p className="eyebrow"><span /> {t.contactEyebrow}</p><h2>{t.contactTitle} <em>{t.contactAccent}</em></h2><p>{t.contactBody}</p><div className="contact-meta"><a href={linktreeUrl} target="_blank" rel="noreferrer"><MapPin size={18} /> {isArabic ? "المملكة العربية السعودية — الموقع عبر Linktree" : "Saudi Arabia — location via Linktree"}</a><a href={phoneHref}><Phone size={18} /> {phoneDisplay}</a><a href={whatsappUrl} target="_blank" rel="noreferrer"><MessageCircle size={18} /> {phoneDisplay}</a></div></div><form className="contact-form" onSubmit={submitBookingToWhatsApp}><div className="form-row"><label>{t.formName}<input required name="firstName" placeholder={t.formName} /></label><label>{t.formEmail}<input required type="email" name="email" placeholder="you@example.com" /></label></div><div className="form-row"><label>{t.formPhone}<input required name="phone" placeholder="+966" /></label><label>{t.formServiceNeeded}<select required name="service" defaultValue=""><option value="" disabled>{t.formServicePlaceholder}</option>{services.map((service) => <option key={service.id} value={service[language].title}>{service[language].title}</option>)}</select></label></div><div className="form-row"><label>{t.formPreferredDate}<input required type="date" name="preferredDate" /></label><label>{t.message}<textarea name="message" rows={3} placeholder={t.message} /></label></div><div className="form-footer"><label className="consent"><input required type="checkbox" /><span>{t.formConsent}</span></label><button className="primary-button" type="submit">{t.formSend} <ArrowRight size={18} /></button></div></form></section>
+        <section id="reviews" className="review-section section-container" data-reveal><p className="eyebrow"><span /> {t.reviewsEyebrow}</p><h2>{t.reviewsTitle} <em>{t.reviewsAccent}</em></h2><p className="review-intro">{t.reviewsBody}</p><div className="review-grid">{reviews.map((review) => <article className="review-card" key={review.id}><div className="review-stars" aria-label="5 / 5">{[0, 1, 2, 3, 4].map((n) => <Star key={n} size={17} fill="currentColor" />)}</div><p className="review-text">{review[language]}</p><footer><strong>{review.name}</strong><span>{t.reviewsAbout} {review.about[language]}</span></footer></article>)}</div></section>
+
+        <section id="contact" className="contact-section section-container" data-reveal><div className="contact-intro"><span className="brand-motif motif-contact" aria-hidden="true"><LazyImage src={generatedMark} alt="" /></span><p className="eyebrow"><span /> {t.contactEyebrow}</p><h2>{t.contactTitle} <em>{t.contactAccent}</em></h2><p>{t.contactBody}</p><div className="contact-meta"><a href={mapsUrl} target="_blank" rel="noreferrer"><MapPin size={18} /> {isArabic ? "جدة، المملكة العربية السعودية" : "Jeddah, Saudi Arabia"}</a><a href={phoneHref}><Phone size={18} /> {phoneDisplay}</a><a href={whatsappUrl} target="_blank" rel="noreferrer"><MessageCircle size={18} /> {phoneDisplay}</a></div></div><form className="contact-form" onSubmit={submitBookingToWhatsApp}><div className="form-row"><label>{t.formName}<input required name="firstName" placeholder={t.formName} /></label><label>{t.formEmail}<input required type="email" name="email" placeholder="you@example.com" /></label></div><div className="form-row"><label>{t.formPhone}<input required name="phone" placeholder="+966" /></label><label>{t.formServiceNeeded}<select required name="service" defaultValue=""><option value="" disabled>{t.formServicePlaceholder}</option>{services.map((service) => <option key={service.id} value={service[language].title}>{service[language].title}</option>)}</select></label></div><div className="form-row"><label>{t.formPreferredDate}<input required type="date" name="preferredDate" /></label><label>{t.message}<textarea name="message" rows={3} placeholder={t.message} /></label></div><div className="form-footer"><label className="consent"><input required type="checkbox" /><span>{t.formConsent}</span></label><button className="primary-button" type="submit">{t.formSend} <ArrowRight size={18} /></button></div></form></section>
 
         <section className="hours-section section-container" data-reveal><div className="hours-heading"><p className="eyebrow"><span /> {t.hours}</p><h2>{isArabic ? "خطّط لزيارتك" : "Plan your visit"}</h2><a className="secondary-button" href={mapsUrl} target="_blank" rel="noreferrer">{t.map} <ArrowRight size={17} /></a></div><div className="hours-grid">{hours[language].map(([day, time]) => <div key={day}><span>{day}</span><strong>{time}</strong></div>)}</div></section>
       </main>
 
-      <footer className="site-footer"><div className="section-container footer-top"><a className="brand footer-brand" href="#top"><LazyImage className="official-logo" src={officialLogo} alt="P. Center" /><span className="brand-wordmark"><strong>P. Center</strong><small>{isArabic ? "عيادة نخبة الأخصائيون" : "Elite Specialists Clinic"}</small></span></a><p>{t.footerAbout}</p><a className="footer-top-link" href="#top">{t.backTop} <ArrowRight size={17} /></a></div><div className="section-container footer-links"><div><p>{t.footerExplore}</p><a href="#services">{t.nav[0][0]}</a><a href="#team">{t.nav[1][0]}</a><a href="#about">{t.nav[2][0]}</a></div><div><p>{t.footerAccess}</p><button onClick={() => scrollToBookingForm()}>{t.appointment}</button><a href="#contact">{t.nav[3][0]}</a><a href={mapsUrl} target="_blank" rel="noreferrer">{t.map}</a></div><div><p>{t.footerNotes}</p><span>{t.footerMessage}</span><span>{t.socials}: <a href={instagramUrl} target="_blank" rel="noreferrer">@p.center0</a></span><span><a href={linktreeUrl} target="_blank" rel="noreferrer">linktr.ee/p.center0</a></span></div></div><div className="section-container footer-bottom"><span>{t.note}</span><span>{isArabic ? "المملكة العربية السعودية" : "Saudi Arabia"}</span></div></footer>
+      <footer className="site-footer"><div className="section-container footer-top"><a className="brand footer-brand" href="#top"><LazyImage className="official-logo" src={officialLogo} alt="P. Center" /><span className="brand-wordmark"><strong>P. Center</strong><small>{isArabic ? "عيادة نخبة الأخصائيون" : "Elite Specialists Clinic"}</small></span></a><p>{t.footerAbout}</p><a className="footer-top-link" href="#top">{t.backTop} <ArrowRight size={17} /></a></div><div className="section-container footer-links"><div><p>{t.footerExplore}</p><a href="#services">{t.nav[0][0]}</a><a href="#team">{t.nav[1][0]}</a><a href="#about">{t.nav[2][0]}</a></div><div><p>{t.footerAccess}</p><button onClick={() => scrollToBookingForm()}>{t.appointment}</button><a href="#contact">{t.nav[3][0]}</a><a href={mapsUrl} target="_blank" rel="noreferrer">{t.map}</a></div><div><p>{t.footerNotes}</p><span>{t.footerMessage}</span><span>{t.socials}: <a href={instagramUrl} target="_blank" rel="noreferrer">@p.center0</a></span><span><a href={linktreeUrl} target="_blank" rel="noreferrer">linktr.ee/p.center0</a></span></div></div><div className="section-container footer-bottom"><span>{t.note}</span><span>{isArabic ? "جدة، المملكة العربية السعودية" : "Jeddah, Saudi Arabia"}</span></div></footer>
 
       {selectedProfile && selectedPerson && <div className="profile-dialog-backdrop" role="presentation" onMouseDown={() => setSelectedProfile(null)}><section className="profile-dialog" role="dialog" aria-modal="true" aria-labelledby="profile-dialog-title" onMouseDown={(event) => event.stopPropagation()}><button className="profile-dialog-close" onClick={() => setSelectedProfile(null)} aria-label={isArabic ? "إغلاق الملف الشخصي" : "Close profile"}><X size={19} /></button><div className="profile-dialog-image">{selectedProfilePhoto ? <LazyImage src={selectedProfilePhoto} alt={`${selectedProfileName} — ${selectedPerson.specialty}`} /> : <div className={`professional-avatar-glyph profile-avatar avatar-${clinicianAvatarGender[selectedProfile.initials] ?? "male"}`} role="img" aria-label={`${selectedProfileName} — ${isArabic ? "صورة رمزية لمختص" : "professional clinician avatar"}`}><UserRound size={72} strokeWidth={1.45} /></div>}</div><div className="profile-dialog-body"><p className="eyebrow"><span /> {t.teamEyebrow}</p><h2 id="profile-dialog-title">{selectedProfileName}</h2><p className="profile-dialog-specialty">{selectedPerson.specialty}</p><p className="team-experience"><Clock3 size={15} /> {selectedPerson.experience ? `${t.experience}: ${selectedPerson.experience}` : experienceUnavailable}</p><div className="profile-detail-grid"><div><h3>{t.credentials}</h3><ul>{selectedPerson.certifications.map((certification) => <li key={certification}>{certification}</li>)}</ul></div><div><h3>{t.careAreas}</h3><ul>{selectedPerson.areas.map((area) => <li key={area}>{area}</li>)}</ul></div><button className="team-book profile-book" onClick={() => { setSelectedProfile(null); scrollToBookingForm(selectedProfileName); }}>{t.appointment}</button></div></div></section></div>}
       <a className="floating-contact" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={t.whatsapp}><LazyImage className="whatsapp-brand-mark" src={whatsappBrandMark} alt="" /></a><div className="floating-share"><button className="floating-share-trigger" type="button" onClick={() => setShareOpen((open) => !open)} aria-label={isArabic ? "مشاركة الموقع" : "Share website"} data-tooltip={isArabic ? "فتح خيارات المشاركة" : "Open share options"} title={isArabic ? "فتح خيارات المشاركة" : "Open share options"} aria-expanded={shareOpen} aria-controls="share-menu"><Share2 size={20} /></button>{shareOpen && <div id="share-menu" className="floating-share-menu" role="menu" aria-label={isArabic ? "خيارات المشاركة" : "Share options"}><a href={whatsappShareUrl} target="_blank" rel="noreferrer" role="menuitem" onClick={() => setShareOpen(false)} data-tooltip={isArabic ? "مشاركة عبر واتساب" : "Share via WhatsApp"} title={isArabic ? "مشاركة عبر واتساب" : "Share via WhatsApp"}><MessageCircle size={17} /> WhatsApp</a><a href={twitterShareUrl} target="_blank" rel="noreferrer" role="menuitem" onClick={() => setShareOpen(false)} data-tooltip={isArabic ? "مشاركة عبر إكس" : "Share via Twitter / X"} title={isArabic ? "مشاركة عبر إكس" : "Share via Twitter / X"}><span className="share-x-mark" aria-hidden="true">X</span> Twitter / X</a></div>}</div><button className="scroll-top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label={t.backTop}><ArrowUp size={20} /></button>{notice && <div className="notice" role="status"><Check size={18} /> {notice}</div>}<div className="carousel-control" aria-label="Example carousel controls"><button onClick={() => setActiveDot((activeDot + 3) % 4)} aria-label="Previous slide"><ChevronLeft size={18} /></button>{[0, 1, 2, 3].map((dot) => <button className={activeDot === dot ? "dot active" : "dot"} aria-label={`Go to slide ${dot + 1}`} key={dot} onClick={() => setActiveDot(dot)} />)}<button onClick={() => setActiveDot((activeDot + 1) % 4)} aria-label="Next slide"><ChevronRight size={18} /></button></div>
