@@ -1,43 +1,63 @@
-/* P. Center overrides: square heart logo + wordmark, partner cards */
+/* P. Center overrides: square heart logo + wordmark (beats the old wide-logo rules, incl. !important ones) */
+.site-shell .brand {
+  gap: 12px;
+  min-width: 0;
+}
+
 .site-shell .brand .official-logo {
-  width: auto;
-  height: 54px;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  background: transparent;
-  border-radius: 0;
+  display: block;
+  width: 52px !important;
+  height: 52px !important;
+  flex: 0 0 auto;
+  padding: 4px;
+  box-sizing: border-box;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 14px !important;
+  background: #fff !important;
 }
 
 .brand-wordmark {
   display: grid;
-  gap: 2px;
-  line-height: 1.1;
+  gap: 3px;
+  min-width: 0;
+  line-height: 1.05;
   text-align: start;
 }
 
 .brand-wordmark strong {
-  color: var(--ink, #1b2b4b);
+  color: #fff;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 700;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .brand-wordmark small {
-  color: var(--muted, #5d6b7d);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 11px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
-.site-footer .brand-wordmark strong { color: #fff; }
-.site-footer .brand-wordmark small { color: rgba(255, 255, 255, 0.75); }
-.site-footer .official-logo { background: #fff; border-radius: 12px; padding: 4px; }
+.site-shell.rtl .brand-wordmark strong { font-family: Tajawal, sans-serif; letter-spacing: 0; }
 
+/* Mobile header is white (mobile-reference.css) -> dark wordmark, no badge needed */
 @media (max-width: 560px) {
-  .site-shell .brand .official-logo { height: 42px; }
-  .brand-wordmark strong { font-size: 18px; }
-  .brand-wordmark small { font-size: 10px; }
+  .site-shell .nav-inner .brand { flex: 1 1 auto; }
+  .site-shell .nav-inner .brand .official-logo {
+    width: 42px !important;
+    height: 42px !important;
+    padding: 0;
+    border-radius: 0 !important;
+  }
+  .site-shell .nav-inner .brand-wordmark strong { color: var(--ink, #1b2b4b); font-size: 19px; }
+  .site-shell .nav-inner .brand-wordmark small { color: var(--muted, #5d6b7d); font-size: 9.5px; }
+  .site-shell .nav-inner .nav-actions { flex: 0 0 auto; }
 }
+
+.site-footer .brand .official-logo { width: 56px !important; height: 56px !important; }
 
 .partner-cards {
   display: grid;

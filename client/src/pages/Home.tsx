@@ -684,7 +684,7 @@ export default function Home() {
       <main id="main-content">
         <section id="top" className="hero-section section-container">
           <div className="hero-card"><div className="hero-art" aria-hidden="true"><LazyImage src={heroImage} alt="" /></div>
-            <div className="hero-copy"><p className="eyebrow"><span /> {t.heroEyebrow}</p><h1><em>{isArabic ? t.heroLead : <><span className="hero-word-your">Enhance</span> <span className="hero-word-treatment">your</span></>}</em> <strong>{t.heroStrong}</strong></h1><p className="hero-description">{t.heroBody}</p>
+            <div className="hero-copy"><p className="eyebrow"><span /> {t.heroEyebrow}</p><h1><em>{isArabic ? t.heroLead : <><span className="hero-word-treatment">Enhance</span> <span className="hero-word-your">your</span></>}</em> <strong>{t.heroStrong}</strong></h1><p className="hero-description">{t.heroBody}</p>
               <div className="hero-actions"><button className="primary-button" onClick={() => scrollToBookingForm()}><CalendarDays size={18} /> {t.appointment}</button><a className="text-button" href="#services">{t.services} <ArrowRight size={17} /></a></div>
             </div><div className="hero-bottom-note"><span className="pulse-dot" /> {t.guidance}</div>
           </div>
